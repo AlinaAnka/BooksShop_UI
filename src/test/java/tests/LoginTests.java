@@ -10,7 +10,6 @@ import pages.ProfilePage;
 
 import static io.qameta.allure.Allure.step;
 
-
 @Epic("Авторизация пользователя")
 @Feature("Личный кабинет")
 @Owner("Алина")

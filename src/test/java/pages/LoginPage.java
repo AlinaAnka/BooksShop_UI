@@ -36,6 +36,7 @@ public class LoginPage {
     }
 
     public void verifyErrorMessage(String text) {
+
         errorMessage.shouldBe(visible).shouldHave(text(text));
     }
 }
