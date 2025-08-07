@@ -15,16 +15,24 @@
 | Java | IntelliJ <br> Idea | GitHub | JUnit <br> 5 | Gradle | Selenide | Selenoid | Alurre <br> Report | Jenkins | Telegram | TestOps |
 |------|--------------------|--------|--------------|--------|----------|----------|--------------------|---------|----------|---------|
 |[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="50" height="50" />](https://www.java.com) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" width="50" height="50" />](https://www.jetbrains.com/idea/) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="50" height="50" />](https://github.com) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg" width="50" height="50" />](https://junit.org/junit5/) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" width="50" height="50" />](https://gradle.org) | [<img src="images/Selenide.svg" width="50" height="50" />](https://selenide.org) | [<img src="images/Selenoid.svg" width="50" height="50" />](https://aerokube.com/selenoid/) | [<img src="images/Allure_Report.svg" width="50" height="50" />](https://docs.qameta.io/allure/) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="50" height="50" />](https://www.jenkins.io) | [<img src="images/Telegram.svg" width="50" height="50" />](https://telegram.org) | [<img src="images/TestOps.svg" width="50" height="50" />](https://telegram.org) |
-          
-## ☑️ Реализованные проверки:
 
-- Проверка заголовка на главной странице  
-- Проверка раздела "О компании"
-- Проверка раздела "Разработка ПО"
-- Проверка раздела "Работа у нас"
-- Проверка вакансии "Тестировщик ПО"
-- Проверка раздела "Филиалы"
-- Проверка филиала "Москва"
+## ☑️ Описание автоматизированных тестов 
+### Структура тестов
+Тесты разделены на 3 основных класса по функциональным блокам:
+- SearchTests - тестирование функционала поиска книг
+- LoginTests - тестирование авторизации пользователя
+- BasketTests - тестирование работы с корзиной
+### Описание реализованных проверок
+#### Класс SearchTests - Функционал поиска книг
+- Поиск книги по автору
+- Поиск книги по точному названию
+#### Класс LoginTests - Функционал авторизации
+- Успешная авторизация с валидными данными
+- Авторизация с неверным паролем
+- Авторизация с неверным email
+#### Класс BasketTests - Функционал работы с корзиной
+- Добавление книги в корзину
+- Удаление книги из корзины
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="50" height="50" /> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/BooksShop/)
 <p align="center">
