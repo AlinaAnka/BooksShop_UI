@@ -64,6 +64,16 @@ gradle clean test
 <img src="images/Allure2.png">
 </p>  
 
+## <img src="images/TestOps.svg" width="50" height="50" /> [Allure TestOps](https://allure.autotests.cloud/project/4846/test-cases?treeId=0)
+<p align="center">  
+<img src="images/Dashboard.png">
+</p>  
+
+### Ручные и и автоматизированные тест кейсы
+<p align="center">  
+<img src="images/TestCase.png">
+</p> 
+
 ## <img src="images/Telegram.svg" width="40" height="40" /> Уведомления в Telegram с использованием бота
 <p align="center">  
 <img src="images/Telegram.png" width="500">
