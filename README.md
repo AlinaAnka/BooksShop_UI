@@ -26,9 +26,9 @@
 - Проверка раздела "Филиалы"
 - Проверка филиала "Москва"
 
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="50" height="50" /> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/HomeWork14/)
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="50" height="50" /> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/BooksShop/)
 <p align="center">
-<img src="images/screenshot_jenkins.png">
+<img src="images/Jenkins.png">
 </p> 
 
 ### Параметры сборки в Jenkins:
@@ -50,6 +50,7 @@ gradle clean test
 -Dbrowser=${BROWSER}
 -Dscreen_resolution=${SCREEN_RESOLUTION}
 -Dbrowser_version=${BROWSER_VERSION}
+-DremoteUrl="https://user1:1234@${SELENOID_URL}/wd/hub"
 ```
 
 ## <img src="images/Allure_Report.svg" width="50" height="50" /> [Allure Report](https://jenkins.autotests.cloud/job/HomeWork14/allure/)
