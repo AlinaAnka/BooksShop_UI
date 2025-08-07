@@ -53,20 +53,20 @@ gradle clean test
 -DremoteUrl="https://user1:1234@${SELENOID_URL}/wd/hub"
 ```
 
-## <img src="images/Allure_Report.svg" width="50" height="50" /> [Allure Report](https://jenkins.autotests.cloud/job/HomeWork14/allure/)
+## <img src="images/Allure_Report.svg" width="50" height="50" /> [Allure Report](https://jenkins.autotests.cloud/job/BooksShop/allure/)
 ### Overview
 <p align="center">  
-<img src="images/Jenkins.png">
+<img src="images/Allure.png">
 </p>  
 
 ### Тест-кейсы
 <p align="center">  
-<img src="images/screenshort_allureReport.png">
+<img src="images/Allure2.png">
 </p>  
 
 ## <img src="images/Telegram.svg" width="40" height="40" /> Уведомления в Telegram с использованием бота
 <p align="center">  
-<img src="images/telegramBot.png" width="500">
+<img src="images/Telegram.png" width="500">
 </p>  
 
 ## <img src="images/Selenoid.svg" width="50" height="50" /> Примеры видео выполнения тестов на Selenoid
