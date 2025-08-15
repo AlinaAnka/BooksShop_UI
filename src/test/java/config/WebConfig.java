@@ -11,5 +11,4 @@ public interface WebConfig extends Config {
     String email();
     String password();
     String baseUrl();
-//    String remoteUrl();
 }
