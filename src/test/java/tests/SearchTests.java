@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.SearchResultsPage;
 
-import static io.qameta.allure.Allure.step;
-
 @Epic("Поиск книг")
 @Feature("Функционал поиска")
 @Owner("Алина")
@@ -22,40 +20,24 @@ public class SearchTests extends TestBase {
     @Story("Поиск книг по критериям")
     @DisplayName("Поиск книги по автору")
     @Severity(SeverityLevel.NORMAL)
-    void searchBookByAuthor() {
+    void searchBookByAuthorTest() {
         String authorName = "Достоевский";
 
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-
-        step("Ищем книги автора", () -> {
-            mainPage.searchFor(authorName);
-        });
-
-        step("Проверяем результаты", () -> {
-            searchResultsPage.verifyAuthorInResults(authorName);
-        });
+        mainPage.openMainPage()
+                .searchFor(authorName);
+        searchResultsPage.verifyAuthorInResults(authorName);
     }
 
     @Test
     @Story("Успешный поиск книги по точному названию")
     @DisplayName("Поиск книги по названию")
     @Severity(SeverityLevel.NORMAL)
-    void searchAnnaKareninaBook() {
+    void searchAnnaKareninaBookTest() {
 
         String bookTitle = "Анна Каренина";
 
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-
-        step("Выполнить поиск книги 'Анна Каренина'", () -> {
-            mainPage.searchFor(bookTitle);
-        });
-
-        step("Проверяем результаты поиска", () -> {
-            searchResultsPage.verifyBookInResults(bookTitle);
-        });
+        mainPage.openMainPage()
+                .searchFor(bookTitle);
+        searchResultsPage.verifyBookInResults(bookTitle);
     }
 }

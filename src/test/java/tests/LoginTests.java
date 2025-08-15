@@ -8,8 +8,6 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.ProfilePage;
 
-import static io.qameta.allure.Allure.step;
-
 @Epic("Авторизация пользователя")
 @Feature("Личный кабинет")
 @Owner("Алина")
@@ -25,69 +23,40 @@ public class LoginTests extends TestBase {
     @Story("Успешная авторизация")
     @DisplayName("Успешная авторизация с валидными данными")
     @Severity(SeverityLevel.CRITICAL)
-    void successfulLogin() {
+    void successfulLoginTest() {
 
-        step("Открываем главную страницу", () -> {
-            mainPage.openMainPage();
-        });
-
-        step("Переходим на страницу авторизации", () -> {
-            loginPage.openLoginPage();
-        });
-
-        step("Вводим email и пароль", () -> {
-            loginPage.setEmail(config.email())
-                    .setPassword(config.password());
-        });
-
-        step("Нажимаем кнопку 'Войти'", () -> {
-            loginPage.submit();
-        });
-
-        step("Проверяем данные в профиле", () -> {
-            profilePage.openProfilePage()
-                    .checkHeader()
-                    .verifyEmail(config.email());
-        });
+        mainPage.openMainPage();
+        loginPage.openLoginPage()
+                .setEmail(config.email())
+                .setPassword(config.password())
+                .submit();
+        profilePage.openProfilePage()
+                .checkHeader()
+                .verifyEmail(config.email());
     }
 
     @Test
     @Story("Обработка ошибок авторизации")
     @DisplayName("Авторизация с неверным паролем")
     @Severity(SeverityLevel.NORMAL)
-    void loginWithWrongPassword() {
-        step("Открываем страницу авторизации", () -> {
-            loginPage.openLoginPage();
-        });
+    void loginWithWrongPasswordTest() {
 
-        step("Вводим неверный пароль", () -> {
-            loginPage.setEmail(config.email())
-                    .setPassword("wrong_password");
-        });
-
-        step("Проверяем сообщение об ошибке", () -> {
-            loginPage.submit();
-            loginPage.verifyErrorMessage("Неверный логин или пароль");
-        });
+        loginPage.openLoginPage()
+                .setEmail(config.email())
+                .setPassword("wrong_password")
+                .submit()
+                .verifyErrorMessage("Неверный логин или пароль");
     }
 
     @Test
     @Story("Обработка ошибок авторизации")
     @DisplayName("Авторизация с неверным email")
     @Severity(SeverityLevel.NORMAL)
-    void loginWithWrongEmail() {
-        step("Открываем страницу авторизации", () -> {
-            loginPage.openLoginPage();
-        });
-
-        step("Вводим неверный email", () -> {
-            loginPage.setEmail("wrong_email")
-                    .setPassword(config.password());
-        });
-
-        step("Проверяем сообщение об ошибке", () -> {
-            loginPage.submit();
-            loginPage.verifyErrorMessage("Неверный логин или пароль");
-        });
+    void loginWithWrongEmailTest() {
+        loginPage.openLoginPage()
+                .setEmail("wrong_email")
+                .setPassword(config.password())
+                .submit()
+                .verifyErrorMessage("Неверный логин или пароль");
     }
 }
